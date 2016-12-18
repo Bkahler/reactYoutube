@@ -1,15 +1,24 @@
+'use strict';
+// in js6 this is how you import modules into different files
+// React and ReactDOM are 2 separate libaries, that work togehter. 
+// ReactDOM handles the interaction with the DOM while react handles the creation of components
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import YouTubeSearch from 'youtube-api-search';
+const API_KEY = process.env.YOUTUBEAPI
 
-import App from './components/app';
-import reducers from './reducers';
+var container = document.querySelector('.container');
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// This section creates a react component
+// const App = function(){
+// 	return <div>Hello World !</div>;
+// }
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+// This is the ES6 shortcut for declaring functions(beware that the 'this' keyword behaves diferently)
+const App = () =>{ return <div>Hello World !</div>; }
+
+// A instance of the component must be passed to ReactDOM.
+// Wrapping the component in JSX tags, creates and instance of the component.
+// When rendering, pass the component instance and the target DOM Element.
+ReactDOM.render(<App />, container);
