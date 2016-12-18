@@ -5,6 +5,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import SearchBar from './components/search_bar';
 import SearchBar from './components/search_bar';
 import YouTubeSearch from 'youtube-api-search';
 const API_KEY = process.env.YOUTUBEAPI
