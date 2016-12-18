@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -16,6 +18,14 @@ module.exports = {
       }
     }]
   },
+  //This section allows react to access env variables
+  plugins:[
+     new webpack.DefinePlugin({
+      'process.env':{
+        'YOUTUBEAPI': JSON.stringify(process.env.YOUTUBEAPI)
+      }
+    })
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
