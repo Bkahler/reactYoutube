@@ -6,25 +6,24 @@ class SearchBar extends Component{
 	// The state property is added to the object.
 	constructor(props){
 		super(props);
-		this.state = { searchTerm:'' };
+		this.state = { term:'' };
 		this.onInputChange = this.onInputChange.bind(this);
 	}
 
 	render(){
 		return(
-			<div>
+			<div className="search-bar">
 				<input
-				 value={this.state.searchTerm} 
-				 onChange={ this.onInputChange } />
-				 
-				<p>Value of the input:{ this.state.searchTerm } </p>
+				 value={this.state.term} 
+				 onChange={event => this.onInputChange(event.target.value)} />
 			</div>
 		);
 	}
 
-	onInputChange(event){
-		this.setState( { searchTerm: event.target.value } );
-		console.log( event.target.value );
+	onInputChange(term){
+		this.setState({term});
+		this.props.onSearchTermChange(term);
+		console.log(term);
 	}
 
 };
