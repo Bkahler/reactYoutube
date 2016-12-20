@@ -27,9 +27,10 @@ class App extends Component{
 	}
 
 	videoSearch(term){
-		YouTubeSearch({key:API_KEY, term:{term} }, (videos) =>{
+		console.log(term)
+		YouTubeSearch({key:API_KEY, term: term }, (videos) =>{
 			console.log('Calling YouTube API');
-			console.log(videos);
+			// console.log(videos);
 			this.setState({ 
 				videos:videos,
 				selectedVideo: videos[0]

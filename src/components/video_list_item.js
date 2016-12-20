@@ -6,7 +6,7 @@ import React from 'react';
 // }
 
 const VideoListItem = ({video, onVideoSelect}) =>{	
-	console.log(video.snippet.title)
+	// console.log(video.snippet.title)
 	const title = video.snippet.title;
 	const imageUrl = video.snippet.thumbnails.default.url;
 
