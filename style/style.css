@@ -2,6 +2,13 @@ body {
 	background: #ddd !important; 
 }
 
+.main-brand{
+	color: #c0392b;
+	padding-left: 15px;
+	letter-spacing: 2px;
+	font-weight: 900
+}
+
 @media (min-width: 900px){
 	.container {
 	    width: 1350px !important;

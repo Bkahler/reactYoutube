@@ -10,6 +10,8 @@ import SearchBar          from './components/search_bar';
 import VideoList          from './components/video_list';
 import VideoDetail        from './components/video_detail';
 import YouTubeSearch      from 'youtube-api-search';
+import ReactIntl from 'react-intl';
+
 
 const API_KEY = process.env.YOUTUBEAPI
 var container = document.querySelector('.container');
@@ -44,7 +46,7 @@ class App extends Component{
 
 		return(
 			<div className="container">
-				<div> ReactTube</div> 
+				<div className='main-brand'>ReactTube</div> 
 				<SearchBar onSearchTermChange={videoSearch}/>
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
