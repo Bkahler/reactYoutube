@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import strftime from 'strftime';
 
 const VideoDetail = ({video}) =>{

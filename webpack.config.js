@@ -1,4 +1,4 @@
-const path = require('path')
+dconst path = require('path')
 const webpack = require('webpack')
 
 module.exports = {

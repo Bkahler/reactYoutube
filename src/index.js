@@ -1,4 +1,3 @@
-'use strict';
 // in js6 this is how you import modules into different files
 // React and ReactDOM are 2 separate libaries, that work togehter. 
 // ReactDOM handles the interaction with the DOM while react handles the creation of components
@@ -10,10 +9,9 @@ import SearchBar          from './components/search_bar';
 import VideoList          from './components/video_list';
 import VideoDetail        from './components/video_detail';
 import YouTubeSearch      from 'youtube-api-search';
-import ReactIntl from 'react-intl';
 
 
-const API_KEY = process.env.YOUTUBEAPI
+const API_KEY = 'AIzaSyB9I2IAY0nR3pe_TTgB9h77LMq4CrGr3Kg'//process.env.YOUTUBEAPI
 var container = document.querySelector('.container');
 
 
@@ -46,11 +44,11 @@ class App extends Component{
 
 		return(
 			<div className="container">
-				<div className='main-brand'>ReactTube</div> 
+				<div className='main-brand'> ReactTube </div> 
 				<SearchBar onSearchTermChange={videoSearch}/>
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
-					onVideoSelect= {selectedVideo => this.setState({selectedVideo})}
+					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
 					videos={this.state.videos} />
 			</div>
 		);
