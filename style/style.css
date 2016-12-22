@@ -2,6 +2,13 @@ body {
 	background: #ddd !important; 
 }
 
+@media (min-width: 900px){
+	.container {
+	    width: 1350px !important;
+	    max-width: 100%;
+	}
+}
+
 .search-bar input {
 	width: 100%;
 	margin-top: 10px;

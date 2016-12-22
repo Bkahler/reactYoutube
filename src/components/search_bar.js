@@ -12,7 +12,7 @@ class SearchBar extends Component{
 
 	render(){
 		return(
-			<div className="search-bar col-xs-12 col-sm-12 col-md-10" >
+			<div className="search-bar col-xs-12 col-sm-12 col-md-12 col-lg-8" >
 				<input
 				 placeholder="search"
 				 value={this.state.term} 
