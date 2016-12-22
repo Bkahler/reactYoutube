@@ -4,6 +4,7 @@
 // ReactDOM handles the interaction with the DOM while react handles the creation of components
 
 import React, {Component} from 'react';
+import _                  from 'lodash';
 import ReactDOM           from 'react-dom';
 import SearchBar          from './components/search_bar';
 import VideoList          from './components/video_list';
@@ -30,7 +31,7 @@ class App extends Component{
 		console.log(term)
 		YouTubeSearch({key:API_KEY, term: term }, (videos) =>{
 			console.log('Calling YouTube API');
-			// console.log(videos);
+
 			this.setState({ 
 				videos:videos,
 				selectedVideo: videos[0]
@@ -39,9 +40,12 @@ class App extends Component{
 	}
 
 	render(){
+		const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 500)
+
 		return(
-			<div className="container"> 
-				<SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
+			<div className="container">
+				<div> ReactTube</div> 
+				<SearchBar onSearchTermChange={videoSearch}/>
 				<VideoDetail video={this.state.selectedVideo} />
 				<VideoList 
 					onVideoSelect= {selectedVideo => this.setState({selectedVideo})}
