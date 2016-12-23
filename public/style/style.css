@@ -11,7 +11,7 @@ body {
 .main-brand{
 	color: #c0392b;
 	letter-spacing: 2px;
-	font-weight: 900
+	font-weight: 900;
 }
 
 @media (min-width: 900px){
@@ -40,7 +40,6 @@ body {
 	background-color: white;
 	margin: 10px 0px ;
 }
-
 
 .list-group{
 	padding: 0px 15px !important;

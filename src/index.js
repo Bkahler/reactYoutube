@@ -16,7 +16,7 @@ const API_KEY = 'AIzaSyB9I2IAY0nR3pe_TTgB9h77LMq4CrGr3Kg'//process.env.YOUTUBEAP
 var container = document.querySelector('.main-container');
 
 
-// This is the ES6 shortcut for declaring functions(beware that the 'this' keyword behaves diferently)
+// This is the ES6 shortcut for declaring functions(beware that the 'this' keyword behaves diferently ie better)
 class App extends Component{ 
 
 	constructor(props){
