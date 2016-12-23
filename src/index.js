@@ -9,10 +9,11 @@ import SearchBar          from './components/search_bar';
 import VideoList          from './components/video_list';
 import VideoDetail        from './components/video_detail';
 import YouTubeSearch      from 'youtube-api-search';
+import NavBar			  from './components/navbar';
 
 
 const API_KEY = 'AIzaSyB9I2IAY0nR3pe_TTgB9h77LMq4CrGr3Kg'//process.env.YOUTUBEAPI
-var container = document.querySelector('.container');
+var container = document.querySelector('.main-container');
 
 
 // This is the ES6 shortcut for declaring functions(beware that the 'this' keyword behaves diferently)
@@ -43,13 +44,15 @@ class App extends Component{
 		const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 500)
 
 		return(
-			<div className="container">
-				<div className='main-brand'> ReactTube </div> 
-				<SearchBar onSearchTermChange={videoSearch}/>
-				<VideoDetail video={this.state.selectedVideo} />
-				<VideoList 
-					onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-					videos={this.state.videos} />
+			<div>
+				<NavBar />
+				<div className='container'>
+					<SearchBar onSearchTermChange={videoSearch}/>
+					<VideoDetail video={this.state.selectedVideo} />
+					<VideoList 
+						onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+						videos={this.state.videos} />
+				</div>
 			</div>
 		);
 	}

@@ -2,9 +2,14 @@ body {
 	background: #ddd !important; 
 }
 
+.brand-icon{
+    height: 26px;
+    padding: 2px;
+    margin-bottom: 4px;
+}
+
 .main-brand{
 	color: #c0392b;
-	padding-left: 15px;
 	letter-spacing: 2px;
 	font-weight: 900
 }
