@@ -12,7 +12,7 @@ import YouTubeSearch      from 'youtube-api-search';
 import NavBar			  from './components/navbar';
 
 
-const API_KEY = 'AIzaSyB9I2IAY0nR3pe_TTgB9h77LMq4CrGr3Kg'//process.env.YOUTUBEAPI
+const API_KEY = ''//process.env.YOUTUBEAPI
 var container = document.querySelector('.main-container');
 
 
